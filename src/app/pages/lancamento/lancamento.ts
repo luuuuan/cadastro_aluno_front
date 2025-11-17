@@ -34,8 +34,8 @@ export class LancamentoComponent implements OnInit {
 
     // TODO: substituir pelos alunos da disciplina (backend)
     this.alunos = [
-      { ra: "1", nome: "Maria", dtNascimento: "2000-01-01", curso: "ADS", cep: "85900000", logradouro: "Rua teste", municipio: "cidade", bairro: "bairro", uf: "PR" },
-      { ra: "2", nome: "Pedro", dtNascimento: "2001-04-22", curso: "ADS", cep: "85908340", logradouro: "teste", municipio: "city", bairro: "city", uf: "SP" },
+      { ra: '1', nome: "Maria", dtNascimento: "2000-01-01", curso: "ADS", cep: "85900000", logradouro: "Rua teste", municipio: "cidade", bairro: "bairro", uf: "PR" },
+      { ra: '2', nome: "Pedro", dtNascimento: "2001-04-22", curso: "ADS", cep: "85908340", logradouro: "teste", municipio: "city", bairro: "city", uf: "SP" },
     ];
 
     this.lancamentos = this.alunos.map(a => ({
