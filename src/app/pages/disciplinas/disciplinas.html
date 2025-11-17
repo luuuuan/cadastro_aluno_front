@@ -1,1 +1,9 @@
-<p>disciplinas works!</p>
+<h2>Minhas Disciplinas</h2>
+
+<ul>
+  <li *ngFor="let d of disciplinas">
+    <a [routerLink]="['/lancamentos', d.codigo]">
+      {{ d.nome }} — {{ d.curso }}
+    </a>
+  </li>
+</ul>
