@@ -1,0 +1,10 @@
+.item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.item:hover {
+  background: #eee;
+}

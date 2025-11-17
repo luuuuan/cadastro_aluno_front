@@ -5,7 +5,6 @@ import { Falta } from './falta.model';
 export interface Lancamento {
   aluno: Aluno;
   disciplina: Disciplina;
-
   notas: {
     bimestre1: number;
     bimestre2: number;
@@ -13,9 +12,5 @@ export interface Lancamento {
   faltas: {
     bimestre1: Falta[];
     bimestre2: Falta[];
-    
   };
-
-  showFaltas?: boolean;
-
 }

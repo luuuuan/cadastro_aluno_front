@@ -1,8 +1,8 @@
-import { Professor } from "./professor.model";
+import { Professor } from './professor.model';
 
 export interface Disciplina {
-    codigo: number;
-    nome: string;
-    professor: Professor;
-    curso: string;
+  codigo: number;
+  nome: string;
+  professor: Professor;
+  curso: string;
 }

@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { Lancamento } from '../models/lancamento.model';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LancamentoService {
 
-  salvarLancamentos(lancamentos: Lancamento[]): Observable<any> {
-    console.log("Enviando dados ao backend:", lancamentos);
-    return of({ ok: true });
+  private storageKey = 'lancamentos';
+
+  salvar(lancamentos: any[]) {
+    localStorage.setItem(this.storageKey, JSON.stringify(lancamentos));
+    return of(true);
   }
 
+  carregar() {
+    const dados = localStorage.getItem(this.storageKey);
+    return dados ? JSON.parse(dados) : [];
+  }
 }

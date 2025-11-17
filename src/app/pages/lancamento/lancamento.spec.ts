@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Lancamento } from './lancamento';
+import { Lancamento } from './lancamento.component';
 
 describe('Lancamento', () => {
   let component: Lancamento;

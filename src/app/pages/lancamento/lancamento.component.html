@@ -1,0 +1,40 @@
+<h2>Lançamento — {{ disciplina.nome }}</h2>
+<h3>Professor: {{ disciplina.professor.nome }}</h3>
+
+<table border="1" cellpadding="8" width="100%">
+  <thead>
+    <tr>
+      <th>Aluno</th>
+      <th>Nota 1º Bim.</th>
+      <th>Nota 2º Bim.</th>
+      <th>Faltas 1º Bim.</th>
+      <th>Faltas 2º Bim.</th>
+      <th>Média</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let l of lancamentos">
+      <td>{{ l.aluno.nome }}</td>
+
+      <td><input type="number" [(ngModel)]="l.notas.bimestre1"></td>
+      <td><input type="number" [(ngModel)]="l.notas.bimestre2"></td>
+
+      <td>
+        <div *ngFor="let f of l.faltas.bimestre1">
+          <input type="checkbox" [(ngModel)]="f.falta"> {{ f.dia }}
+        </div>
+      </td>
+
+      <td>
+        <div *ngFor="let f of l.faltas.bimestre2">
+          <input type="checkbox" [(ngModel)]="f.falta"> {{ f.dia }}
+        </div>
+      </td>
+
+      <td>{{ media(l) }}</td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="salvar()" class="btn">Salvar</button>
+<p>{{ mensagem }}</p>
